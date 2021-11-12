@@ -1,0 +1,184 @@
+@import url('http://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    background-image: url("background.png");
+    background-size: 1420px auto;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.container {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 512px;
+    height: 606px;
+    text-align: center;
+    border: 20px solid #101116;
+    background-color: #101116;
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 448px;
+        height: 532px;
+        border: 16px solid #101116;
+        border-radius: 8px;
+    }
+}
+
+/* for desktops */
+
+@media (max-width: 991px) {
+    .container {
+        width: 384px;
+        height: 456px;
+        border: 12px solid #101116;
+        border-radius: 6px;
+    }
+}
+
+/* for laptops */
+
+@media (max-width: 768px) {
+    .container {
+        width: 320px;
+        height: 380px;
+        border: 8px solid #101116;
+    }
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(90px, auto);
+}
+
+@media (max-width: 1200px) {
+    .keypad {
+        grid-auto-rows: minmax(82px, auto);
+    }
+}
+
+/* for desktops */
+
+@media (max-width: 991px) {
+    .keypad {
+        grid-auto-rows: minmax(74px, auto);
+    }
+}
+
+@media (max-width: 768px) {
+    .keypad {
+        grid-auto-rows: minmax(66px, auto);
+    }
+}
+
+input[type="text"] {
+    height: 150px;
+    width: 498px;
+    background-color: #10111600;
+    border: none;
+    color: white;
+    text-align: right;
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1200px) {
+    input[type="text"] {
+        height: 120px;
+        width: 436px;
+        font-size: 52px;
+    }
+}
+
+/* for desktops */
+
+@media (max-width: 991px) {
+    input[type="text"] {
+        height: 87px;
+        width: 374px;
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    input[type="text"] {
+        height: 52px;
+        width: 312px;
+        font-size: 35px;
+    }
+}
+
+#clear {
+    grid-column: 1/3;
+    grid-row: 1;
+    color: #262834;
+}
+
+#result {
+    grid-column: 3/5;
+    grid-row: 5;
+    color: #262834;
+}
+
+#backspace {
+    color: #262834;
+}
+
+button {
+    margin: 6px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #262834;
+    color: white;
+    font-weight: 500;
+}
+
+button:hover {
+    border: 1px solid white;
+}
+
+@media (max-width: 1200px) {
+    button {
+        margin: 5px;
+        border-radius: 7px;
+    }
+}
+
+@media (max-width: 991px) {
+    button {
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    button {
+        margin: 4px;
+        border-radius: 5px;
+    }
+}
+
+input:focus, input:active, button:focus, button.active {
+    outline: none;
+}
+
+.highlight {
+    background-color: #aaaaaa;
+}
